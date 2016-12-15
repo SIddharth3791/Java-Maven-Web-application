@@ -7,6 +7,10 @@
 <title>Welcome To JSP Page</title>
 </head>
 <body>
-Welcome ${name} 
+Welcome ${name} and your password ${password }
 </body>
 </html>
+
+<!-- validated user -->
+
+<!-- Not validated user -->

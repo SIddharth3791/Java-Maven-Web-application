@@ -10,7 +10,13 @@
 <body>
 It is going to get so complicated now ${name} because your password is : ${password}
 <form action="/Login.Do" method = "Post">
-Enter your name <input type = "text" name="name"/> <input type = "submit" value="submit"/>
+<p><font color = red>${ErrorMessage}  </font></p>
+
+Enter your name <input type = "text" name="name"/> 
+Enter your Password <input type = "password" name="password"/>
+<br></br>
+&nbsp;&nbsp;&nbsp;&nbsp;<input type = "submit" value="submit"/>
+
 </form>
 </body>
 </html>
