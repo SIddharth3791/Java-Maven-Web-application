@@ -11,16 +11,18 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = "/Login.Do")
 public class LoginServlet extends HttpServlet{
-	
-	
 	 protected void doGet(HttpServletRequest Request, HttpServletResponse Response)
 			 throws ServletException, IOException {
-		 
-		 String name = Request.getParameter("name");
-	
-		Request.setAttribute("name",name);
+		
 		Request.getRequestDispatcher("/WEB-INF/views/LoginView.jsp").forward(Request, Response);
 	}
+	 protected void doPost(HttpServletRequest Request, HttpServletResponse Response)
+			 throws ServletException, IOException {
+		Request.setAttribute("name", Request.getParameter("name"));
+		Request.getRequestDispatcher("/WEB-INF/views/Welcome.jsp").forward(Request, Response);
+	}
+	 
+	 
 	  
 
 }
